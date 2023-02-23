@@ -49,7 +49,7 @@ class authValidation {
             .strict()
             .regex(/^[0-9]{10}$/)
             .messages({
-              "string.pattern.base": `Phone number must have 10 digits.`,
+              "string.pattern.base": `Phone number must have 10 digits!`,
             })
             .required(),
         })
