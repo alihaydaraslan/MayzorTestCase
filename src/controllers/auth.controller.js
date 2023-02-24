@@ -55,8 +55,6 @@ const register = async (req, res) => {
 
   req.body.password = await bcrypt.hash(req.body.password, 10);
 
-  console.log("hashed pass: " + req.body.password);
-
   const userSave = new user(req.body);
 
   await userSave
@@ -71,7 +69,12 @@ const register = async (req, res) => {
     });
 };
 
+const me = async (req, res) => {
+  return new Response(req.user).success(res)
+}
+
 module.exports = {
   login,
   register,
+  me
 };
