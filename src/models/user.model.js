@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
-    phoneNumber: {
+    phone: {
       type: String,
       match: /^[0-9]{10}$/,
     },
