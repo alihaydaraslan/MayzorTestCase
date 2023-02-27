@@ -28,7 +28,10 @@ const userSchema = new mongoose.Schema(
       match: /^[0-9]{10}$/,
     },
   },
-  { collection: "users", timestamps: true }
+  {
+    collection: "users",
+    timestamps: true,
+  }
 );
 
 const user = mongoose.model("users", userSchema);

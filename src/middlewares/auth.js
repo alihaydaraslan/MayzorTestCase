@@ -36,7 +36,7 @@ const tokenCheck = async (req, res, next) => {
       .findById(decoded.sub)
       .select("_id name lastname email");
 
-    if (!userInfo) throw new APIError("Invalid token.", 401);
+    if (!userInfo) throw new APIError("Invalid token.", 401)
 
     req.user = userInfo;
 
